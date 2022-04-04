@@ -89,7 +89,7 @@ const Profile = () => {
                 Likes</Link>
             </li>
             <li className="nav-item">
-              <Link to="/profile/dislikes"
+              <Link to="/profile/mydislikes"
                     className={`nav-link ${location.pathname.indexOf('mydislikes') >= 0 ? 'active':''}`}>
                 Dislikes</Link>
             </li>
@@ -101,7 +101,7 @@ const Profile = () => {
           <Route path="/tuits-and-replies" element={<TuitsAndReplies/>}/>
           <Route path="/media" element={<Media/>}/>
           <Route path="/mylikes" element={<MyLikes/>}/>
-          <Route path="/dislikes" element={<MyDislikes/>}/>
+          <Route path="/mydislikes" element={<MyDislikes/>}/>
         </Routes>
     </div>
   );
