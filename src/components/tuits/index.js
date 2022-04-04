@@ -8,6 +8,10 @@ const Tuits = ({tuits = [], refreshTuits}) => {
         likesService.userLikesTuit("me", tuit._id)
             .then(refreshTuits)
             .catch(e => alert(e))
+    const unlikeTuit = (tuit) => 
+        likesService.userunLikesTuit("me", tuit._id)
+            .then(resfreshTuits)
+            .catch(e => alert(e))
     const deleteTuit = (tid) =>
         service.deleteTuit(tid)
             .then(refreshTuits);
@@ -17,9 +21,11 @@ const Tuits = ({tuits = [], refreshTuits}) => {
           <ul className="ttr-tuits list-group">
             {
               tuits.map && tuits.map(tuit =>
-                  <Tuit key={tuit._id}
+                  <Tuit className="the-tuit"
+                        key={tuit._id}
                         deleteTuit={deleteTuit}
                         likeTuit={likeTuit}
+                        unlikeTuit={unlikeTuit}
                         tuit={tuit}/>)
             }
           </ul>
