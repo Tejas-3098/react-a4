@@ -8,6 +8,10 @@ const Tuits = ({tuits = [], refreshTuits}) => {
         likesService.userLikesTuit("me", tuit._id)
             .then(refreshTuits)
             .catch(e => alert(e))
+    const unlikeTuit = (tuit) => 
+        likesService.userunLikesTuit("me", tuit._id)
+            .then(resfreshTuits)
+            .catch(e => alert(e))
     const deleteTuit = (tid) =>
         service.deleteTuit(tid)
             .then(refreshTuits);
@@ -21,6 +25,7 @@ const Tuits = ({tuits = [], refreshTuits}) => {
                         key={tuit._id}
                         deleteTuit={deleteTuit}
                         likeTuit={likeTuit}
+                        unlikeTuit={unlikeTuit}
                         tuit={tuit}/>)
             }
           </ul>
