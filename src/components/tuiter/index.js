@@ -1,3 +1,6 @@
+/**
+    Renders the components of the tuiter app according to the routes that are specified.
+*/
 import React from "react";
 import Navigation from "../navigation";
 import WhatsHappening from "../whats-happening";
