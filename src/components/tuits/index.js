@@ -1,3 +1,6 @@
+/**
+    Component that renders the tuit array.
+*/
 import React from "react";
 import './tuits.css';
 import Tuit from "./tuit";
