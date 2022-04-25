@@ -1,3 +1,6 @@
+/**
+    Component showing the tuits and replies of the logged-in user 
+*/
 const TuitsAndReplies = () => {
     return(
         <div>
