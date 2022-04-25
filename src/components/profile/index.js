@@ -1,3 +1,6 @@
+/**
+    Component that shows profile page of the logged-in user.
+*/
 import React, {useEffect, useState} from "react";
 import MyTuits from "./my-tuits";
 import {HashRouter, Link, Route, Routes, useNavigate, useLocation} from "react-router-dom";
