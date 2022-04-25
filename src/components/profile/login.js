@@ -1,3 +1,6 @@
+/**
+    Component which shows login page to the user so that they can log in to view tuiter home page
+*/
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
