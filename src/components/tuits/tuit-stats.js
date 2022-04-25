@@ -1,6 +1,11 @@
+/**
+    Component which shows statistics of the various tuits like number of replies, retuits,
+    likes and dislikes.
+*/
 import React from "react";
 
-const TuitStats = ({tuit, likeTuit = () => {}, unlikeTuit = () => {}}) => {
+const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
+    
     return (
       <div className="row mt-2">
         <div className="col">
@@ -12,22 +17,30 @@ const TuitStats = ({tuit, likeTuit = () => {}, unlikeTuit = () => {}}) => {
           {tuit.stats && tuit.stats.retuits}
         </div>
         <div className="col">
-          <span onClick={() => likeTuit(tuit)}>
+          <span className="ttr-like-tuit-click" onClick={() => likeTuit(tuit)}>
           {
-            tuit.stats && tuit.stats.likes > 0 &&
-              <i className="fa-regular fa-thumbs-up"></i>
+            tuit.stats.likes > 0 &&
+              <i className="fa-solid fa-thumbs-up"></i>
           }
           {
-            tuit.stats && tuit.stats.likes <= 0 &&
+            tuit.stats.likes <= 0 &&
               <i className="fa-light fa-thumbs-up"></i>
           }
-            {tuit.stats && tuit.stats.likes}
+          <span className="ttr-stats-likes">{tuits.stats && tuit.stats.likes}</span>
+
           </span>
         </div>
         <div className="col">
-          <span onClick={() => unlikeTuit(tuit)}>
-            <i class="fa-light fa-thumbs-down"></i>
-            {tuit.stats && tuit.stats.likes}
+          <span className="ttr-dislike-tuit-click" onClick={() => dislikeTuit(tuit)}>
+              {
+                tuit.stats.dislikes > 0 &&                  
+                    <i className="fa-solid fa-thumbs-down"></i>
+              }
+              {
+                  tuit.stats.dislikes <=0 &&
+                      <i className="fa-light fa-thumbs-down"></i>
+              }
+            <span className="ttr-stats-dislikes">{tuit.stats && tuit.stats.dislikes}</span>
           </span>
         </div>
         <div className="col">
