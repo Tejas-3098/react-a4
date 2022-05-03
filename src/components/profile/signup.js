@@ -2,7 +2,7 @@
     Component showing the sign up page which the user can use to create their account.
 */
 import {useState} from "react";
-import * as service from "../../services/security-service";
+import * as service from "../../services/auth-service";
 import {useNavigate} from "react-router-dom";
 
 const Signup = () => {
