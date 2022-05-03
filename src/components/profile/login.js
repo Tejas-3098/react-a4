@@ -4,7 +4,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
-import * as service from "../../services/security-service";
+import * as service from "../../services/auth-service";
 
 export const Login = () => {
     const [loginUser, setLoginUser] = useState({});
