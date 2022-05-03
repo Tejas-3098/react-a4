@@ -13,7 +13,7 @@ const Tuits = ({tuits = [], refreshTuits}) => {
             .catch(e => alert(e))
     const dislikeTuit = (tuit) => 
         likesService.userDislikesTuit("me", tuit._id)
-            .then(resfreshTuits)
+            .then(refreshTuits)
             .catch(e => alert(e))
     const deleteTuit = (tid) =>
         service.deleteTuit(tid)
